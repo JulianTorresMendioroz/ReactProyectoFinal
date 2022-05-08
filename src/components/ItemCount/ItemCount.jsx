@@ -10,6 +10,13 @@ const ItemCount = ({ initial, stock, onAdd }) => {
       alert("¡No hay STOCK!");
     }
   }
+
+  function addCart(){
+    if (onAdd = setCont)
+    alert(cont + " " + "Productos han sido agregados al carrito")
+    
+  }
+
   return (
     
     
@@ -18,7 +25,9 @@ const ItemCount = ({ initial, stock, onAdd }) => {
           <div>
             <h2>{cont}</h2>
             <button onClick={count}>+</button>
-            <button onClick={()=> setCont(cont - 1)}></button>
+            <button onClick={addCart} >Agregar al carrito</button>
+            <button onClick={()=> setCont(cont -1)} disabled={cont=== 1}></button>
+            
           </div>
         </div>
       
