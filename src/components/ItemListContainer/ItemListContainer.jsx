@@ -6,7 +6,7 @@ const ItemListContainer = ({ greeting="¡Hola soy un saludo efímero!" }) => {
     <div>
       
       {greeting} 
-      <ItemCount initial={0} stock={5} onAdd />
+      <ItemCount initial={1} stock={5} onAdd />
        </div>
   )
 }
