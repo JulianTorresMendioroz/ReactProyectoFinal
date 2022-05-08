@@ -11,22 +11,27 @@ const ItemCount = ({ initial, stock, onAdd }) => {
     }
   }
 
-  function addCart(){
-    if (onAdd = setCont)
+  function discount() { 
+
+   setCont(cont -1)
+
+  }
+
+  function addCart() 
+  {
     alert(cont + " " + "Productos han sido agregados al carrito")
     
   }
 
   return (
     
-    
         <div>
-          <h1>Productos agregados al carrito:</h1>
+          <p>Productos agregados al carrito:</p>
           <div>
             <h2>{cont}</h2>
             <button onClick={count}>+</button>
             <button onClick={addCart} >Agregar al carrito</button>
-            <button onClick={()=> setCont(cont -1)} disabled={cont=== 1}>-</button>
+            <button onClick={discount} disabled={cont == 0} >-</button>
             
           </div>
         </div>
