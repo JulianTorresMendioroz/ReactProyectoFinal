@@ -1,6 +1,9 @@
 import React, { useState } from "react";
+import  {Card}   from "react-bootstrap";
+import '../ItemCount/ItemCount.css'
 
 const ItemCount = ({ initial, stock, onAdd }) => {
+
   const [cont, setCont] = useState(initial);
 
   function count() {
@@ -17,21 +20,22 @@ const ItemCount = ({ initial, stock, onAdd }) => {
 
   }
 
-  function addCart() 
+  function addCart()
   {
     alert(cont + " " + "Productos han sido agregados al carrito")
     
   }
+ 
 
   return (
-    
-        <div>
+
+        <div className="divPrincipalItemCount">
           <p>Productos agregados al carrito:</p>
           <div>
             <h2>{cont}</h2>
             <button onClick={count}>+</button>
             <button onClick={addCart} >Agregar al carrito</button>
-            <button onClick={discount} disabled={cont == 0} >-</button>
+            <button onClick={discount} disabled={cont == initial} >-</button>
             
           </div>
         </div>

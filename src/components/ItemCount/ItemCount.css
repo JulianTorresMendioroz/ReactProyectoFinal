@@ -1,0 +1,7 @@
+.divPrincipalItemCount { 
+
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+    justify-content: center;
+}
