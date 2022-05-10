@@ -4,7 +4,7 @@ export default function ItemList({items}) {
 
     return (
         <div>
-            {items.map(el => <Item key={el.id} titulo={el.title} descripcion={el.description} price={el.price} img={el.imgUrl} stock={el.stock} />)}
+            {items.map(el => <Item key={el.id} title={el.title} description={el.description} price={el.price} pictureUrl={el.pictureUrl} stock={el.stock} />)}
         </div>
     );
 }
