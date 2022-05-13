@@ -11,7 +11,7 @@ function App() {
       <header className="App-header">
         <NavBar/>
         <ItemListContainer greeting={'¡Hola, soy un saludo permanente!'} />
-        <ItemDetailContainer/>
+
       </header>
     </div>
   );

@@ -32,7 +32,7 @@ const ItemCount = ({ initial, stock, onAdd }) => {
             <h2>{cont}</h2>
             <button onClick={count}>+</button>
             <button onClick={addCart} >Agregar al carrito</button>
-            <button onClick={discount} disabled={cont === initial} >-</button>
+            <button onClick={discount} disabled={cont === 1} >-</button>
             
           </div>
         </div>
