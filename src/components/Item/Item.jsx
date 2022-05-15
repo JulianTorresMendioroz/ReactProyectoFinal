@@ -1,20 +1,18 @@
-import ItemCount from '../ItemCount/ItemCount';
+import ItemCount from "./components/ItemCount/ItemCount";
 
 
-
-export default function Item({title, description, price, pictureUrl, stock, initial}) {
+export default function Item({el}) {
 
     return (
-        <div>
-            <img src={pictureUrl} alt="imagenesBuzos" />
+        <div className="item">
+            <img src={el.pictureUrl} alt="imagenesBuzos" />
+            <div></div>
             <div>
-                <h3>{title}</h3>
-                <p>{`Descripción: ${description}`}</p>
-                <p>{`Precio: $${price}`}</p>
-                <p>{`Stock: ${stock}`}</p>
-                <ItemCount initial={initial} stock={stock} onAdd={(cont)=>console.log(`${cont} Productos agregados`)}/>
+                <p>{el.description}</p>
+                <h3>{el.title}</h3>
+                <p>{`Precio: $${el.price}`}</p>
+                <ItemCount id={el.id} initial={1} stock={stock} onAdd={(cont)=>console.log(`${cont} Productos agregados`)}/>
             </div>
         </div>
     );
 }
-

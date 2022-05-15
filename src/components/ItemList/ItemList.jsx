@@ -1,11 +1,13 @@
-import Item from '../Item/Item'
+import Item from "./components/Item/Item";
 
-export default function ItemList({items}) {
+export default function ItemList({items, id}) {
 
     return (
-        <div>
-            {items.map(el => <Item key={el.id} title={el.title} description={el.description} price={el.price} pictureUrl={el.pictureUrl} stock={el.stock} initial={el.initial} />)}
+        <div className="itemList">
+            {id? 
+                items.filter(el => el.categoria === id).map((el) => <Item key={el.id} el={el}/>)
+                    :items.map((el) => <Item key={el.id} el={el}/>)
+            }
         </div>
     );
 }
-

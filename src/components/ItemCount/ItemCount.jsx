@@ -20,7 +20,7 @@ const ItemCount = ({ initial, stock, onAdd }) => {
 
   function addCart() 
   {
-    alert(cont + " " + "Productos han sido agregados al carrito") 
+    onAdd(cont)
     
   }
 
@@ -32,7 +32,10 @@ const ItemCount = ({ initial, stock, onAdd }) => {
             <h2>{cont}</h2>
             <button onClick={count}>+</button>
             <button onClick={addCart} >Agregar al carrito</button>
-            <button onClick={discount} disabled={cont === 1} >-</button>
+            <button onClick={discount} disabled={cont == 1} >-</button>
+            <Link to={`/itemDetail/${id}`}>
+                <button onClick={addCart}></button>
+            </Link>
             
           </div>
         </div>
