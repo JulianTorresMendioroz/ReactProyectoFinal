@@ -4,13 +4,13 @@ export default function Item({el}) {
 
     return (
         <div className="item">
-            <img src={el.pictureUrl} alt="imagenesBuzos" />
-            <div></div>
+            <img src={el.pictureUrl} alt="" />
             <div>
-                <p>{el.description}</p>
-                <h3>{el.title}</h3>
+                <h3>{`Titulo: ${el.title}`}</h3>
+                <p>{`Descripcion: ${el.description}`}</p>
                 <p>{`Precio: $${el.price}`}</p>
-                <ItemCount id={el.id} initial={1} stock={stock} onAdd={(cont)=>console.log(`${cont} Productos agregados`)}/>
+                <p>{`Stock: ${el.stock}`}</p>
+                <ItemCount id={el.id} initial={1} stock={el.stock} onAdd={(cont)=>alert(`${cont} Productos agregados`)}/>
             </div>
         </div>
     );
