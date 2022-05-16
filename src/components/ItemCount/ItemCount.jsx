@@ -37,7 +37,7 @@ const ItemCount = ({ initial, stock, onAdd, id }) => {
             <button onClick={addCart} >Agregar al carrito</button>
             <button onClick={discount} disabled={cont == 1} >-</button>
             <Link to={`/ItemDetail/${id}`}>
-                <button onClick={addCart}></button>
+                <button>Detalle del producto</button>
             </Link>
           </div>
         </div>

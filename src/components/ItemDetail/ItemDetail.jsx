@@ -5,11 +5,11 @@ export default function ItemDetail({item}) {
         <div>
             <img src={item.pictureUrl} alt="imagenesBuzos" />
             <div>
-                <h3>{item.title}</h3>
-                <p>{item.description}</p>
-                <p>{item.id}</p>
+            <p>{`Descripcion: ${item.description}`}</p>
+                <p>{`Precio: $${item.price}`}</p>
+                <p>{`Stock: ${item.stock}`}</p>
                 <p>{`Precio: $${item.price}`}</p> 
-                <button onClick={addCart}></button>
+                
             </div>
         </div>
     );
