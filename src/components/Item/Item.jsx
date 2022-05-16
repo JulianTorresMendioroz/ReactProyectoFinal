@@ -1,5 +1,4 @@
-import ItemCount from "./components/ItemCount/ItemCount";
-
+import ItemCount from "../ItemCount/ItemCount";
 
 export default function Item({el}) {
 

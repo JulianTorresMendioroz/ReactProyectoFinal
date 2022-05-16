@@ -1,4 +1,4 @@
-import Item from "./components/Item/Item";
+import Item from "../Item/Item";
 
 export default function ItemList({items, id}) {
 

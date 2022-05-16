@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import ItemDetail from "./components/ItemDetail/ItemDetail";
+import ItemDetail from "../ItemDetail/ItemDetail";
 
 
 export default function ItemDetailContainer() {
