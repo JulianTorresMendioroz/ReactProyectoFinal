@@ -3,7 +3,8 @@
     {
         "id": "1",
         "title": "Buzo Negro",
-        "description": "Buzo",
+        "description": "Buzo con capucha",
+        "category": "Buzo con capucha",
         "price": "3500",
         "pictureUrl": "https://static.dafiti.com.ar/p/aloud-0751-566909-1-product.jpg",
         "stock": 5,
@@ -13,7 +14,8 @@
     {
         "id": "2",
         "title": "Buzo Blanco",
-        "description": "Buzo",
+        "description": "Buzo con capucha",
+        "category": "Buzo con capucha",
         "price": "4000",
         "pictureUrl": "https://d3ugyf2ht6aenh.cloudfront.net/stores/001/268/672/products/77baf6a47f3c5f817658520a84097c551-e167d85110c8d3a9e016243830743243-1024-1024.jpg",
         "stock": 8,
@@ -23,7 +25,8 @@
     {
         "id": "3",
         "title": "Buzo Rojo",
-        "description": "Buzo",
+        "description": "Buzo con capucha",
+        "category": "Buzo con capucha",
         "price": "6000",
         "pictureUrl": "https://http2.mlstatic.com/D_NQ_NP_776748-MLA43700792935_102020-W.jpg",
         "stock": 2,
@@ -33,7 +36,8 @@
     {
         "id": "4",
         "title": "Buzo Azul",
-        "description": "Buzo",
+        "description": "Buzo sin capucha",
+        "category": "Buzo sin capucha",
         "price": "5500",
         "pictureUrl": "https://www.remerasya.com/pub/media/catalog/product/cache/ffdc873e1c2bb920f5c9f401e1017da8/b/u/buzo_azul_francia_liso_1.jpg",
         "stock": 4,
@@ -43,7 +47,8 @@
     {
         "id": "5",
         "title": "Buzo Amarillo",
-        "description": "Buzo",
+        "description": "Buzo con capucha",
+        "category": "Buzo con capucha",
         "price": "6200",
         "pictureUrl": "https://i.pinimg.com/736x/e7/69/7b/e7697bc61555ae06cd6f254270da674d--yellow-shirts-yellow-sweatshirt.jpg",
         "stock": 2,
@@ -53,7 +58,8 @@
     {
         "id": "6",
         "title": "Buzo Verde",
-        "description": "Buzo",
+        "description": "Buzo sin capucha",
+        "category": "Buzo sin capucha",
         "price": "5500",
         "pictureUrl": "http://d3ugyf2ht6aenh.cloudfront.net/stores/001/458/807/products/bz-crs-verde_ingles-5b92cb013a8269f66216141306343837-640-0.jpg",
         "stock": 6,

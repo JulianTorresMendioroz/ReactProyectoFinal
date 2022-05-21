@@ -21,8 +21,10 @@ export default function ItemDetailContainer() {
     },[id]);
 
     return (
+        
         <div>
             {loader? <h2>Simulando retardo en la red...</h2>: <ItemDetail item={item}/>}
+           
         </div>
     );
 }

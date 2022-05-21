@@ -14,7 +14,7 @@ export default function ItemListContainer() {
         .catch(err => console.log(err))
         .finally(() => setLoader(false))
     },[]);
-
+    
     return (
         <div>
             {loader? <h2>Simulando retardo en la red...</h2>: <ItemList items={items} id={id} />}

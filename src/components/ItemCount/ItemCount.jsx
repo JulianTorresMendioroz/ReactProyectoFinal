@@ -1,11 +1,10 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import '../ItemCount/ItemCount.css'
 import '../ItemDetail/ItemDetail'
 import '../Item/Item'
 import '../ItemList/ItemList'
 
-const ItemCount = ({ initial, stock, onAdd, id }) => {
+const ItemCount = ({ initial, stock, item, onAdd, InputType, description}) => {
 
   const [cont, setCont] = useState(initial);
 
@@ -24,8 +23,8 @@ const ItemCount = ({ initial, stock, onAdd, id }) => {
 
   function addCart() 
   {
-    onAdd(cont)
-    
+    onAdd(cont, item, description);
+    InputType();
   }
 
   return (
@@ -33,12 +32,9 @@ const ItemCount = ({ initial, stock, onAdd, id }) => {
         <div className="divPrincipalItemCount">
           <div>
             <h2>{cont}</h2>
-            <button onClick={count}>+</button>
+            <button onClick={discount} disabled={cont === 1} >-</button>
             <button onClick={addCart} >Agregar al carrito</button>
-            <button onClick={discount} disabled={cont == 1} >-</button>
-            <Link to={`/ItemDetail/${id}`}>
-                <button>Detalle del producto</button>
-            </Link>
+            <button onClick={count}>+</button>
           </div>
         </div>
       

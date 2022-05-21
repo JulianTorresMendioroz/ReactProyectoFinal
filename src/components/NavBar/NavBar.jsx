@@ -1,7 +1,7 @@
 import {Navbar, Container, Nav} from 'react-bootstrap/'
 import CartWidget from '../CartWidget/CartWidget'
 import '../NavBar/NavBar.css'
-
+import {Link} from 'react-router-dom'
 
 const NavBar = () => {
 
@@ -9,12 +9,17 @@ const NavBar = () => {
 
         <Navbar bg="black" variant="dark">
         <Container>
-        <Navbar.Brand href="#home">Hoodies Shop</Navbar.Brand>
+        <Link to='/'>
+        <Navbar.Brand>Hoodies Shop</Navbar.Brand>
+        </Link>
         <CartWidget/>
         <Nav className="nav navbar-nav navbar-center">
-        <Nav.Link href="#home">Home</Nav.Link>
-        <Nav.Link href="#features">Productos</Nav.Link>
-        <Nav.Link href="#pricing">Nosotros</Nav.Link>
+        <Link to='/category/Buzo sin capucha' style={{ textDecoration: 'none' }}>
+        <li>Buzos sin capucha</li>
+        </Link>
+        <Link to='/category/Buzo con capucha' style={{ textDecoration: 'none' }}>
+        <li>Buzos con capucha</li>
+        </Link>
         </Nav>
         </Container>
         
