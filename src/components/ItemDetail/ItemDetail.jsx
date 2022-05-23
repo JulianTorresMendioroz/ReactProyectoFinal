@@ -4,21 +4,17 @@ import { UseCartContext } from "../../Context/CartContext"
 import AddButton from "../AddButton/AddButton"
 
 export default function ItemDetail({item, stock}) {
-
-const [inputType, setInputType] = useState('itemCount');
-    const [quantityToAdd,setQuantityToAdd] = useState();
-    const {addToCart, cartList} = UseCartContext();
+    const [inputType, setInputType] = useState('itemCount');
+    const {addToCart} = UseCartContext();
     
-    function onAdd(cont, description) {
-        setQuantityToAdd(cont)
-        console.log(`${cont} unidad/es de ${description} agregada/s al pedido`);
-        addToCart(item, cont)
+    function onAdd(cont) {
+        addToCart({...item, cont})
     }
     function InputType() {
         setInputType('AddButton');
     }
 
-    console.log(cartList)
+    //console.log(cartList)//
 
     return (
         <div>
