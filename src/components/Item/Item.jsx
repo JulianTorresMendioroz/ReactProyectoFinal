@@ -5,14 +5,15 @@ export default function Item({el}) {
     return (
         <div>
             <img src={el.pictureUrl} alt="" />
+            <div></div>
             <div>
-                <h3>{`Titulo: ${el.title}`}</h3>
-                <p>{`Descripcion: ${el.description}`}</p>
+                <p>{el.title}</p>
+                <h3>{el.description}</h3>
                 <p>{`Precio: $${el.price}`}</p>
                 <p>{`Stock: ${el.stock}`}</p>
-                <Link to={`/ItemDetail/${el.id}`}>
-                <button>Detalle del producto</button>
-            </Link>
+                <Link to={`/itemDetail/${el.id}`}>
+                    <button>Agregar al carrito</button>
+                </Link>
             </div>
         </div>
     );

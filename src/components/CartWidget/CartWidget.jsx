@@ -1,18 +1,15 @@
-import '../CartWidget/CartWidget.css'
-import { Link} from "react-router-dom"
+import { Link } from "react-router-dom";
+import { UseCartContext } from "../../Context/CartContext";
 
-const CartWidget = () => {
 
-  return (
+export default function CartWidget() {
+    const {totalItems} = UseCartContext();
 
-    <>
-    <Link to='/cart'>
-        <img src="https://icon-library.com/images/white-shopping-cart-icon/white-shopping-cart-icon-2.jpg" className='CartWidgetIcon' alt="CartIcon" />
-        <span><i></i></span>
-                <span>0</span>
+    return (
+        <Link to='/cart' >
+           <img src="https://icon-library.com/images/white-shopping-cart-icon/white-shopping-cart-icon-2.jpg" className='CartWidgetIcon' alt="CartIcon" />
+                <span><i></i></span>
+                <span>{totalItems}</span>
         </Link>
-    </>
-  )
+    );
 }
-
-export default CartWidget

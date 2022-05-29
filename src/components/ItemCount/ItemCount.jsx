@@ -4,7 +4,7 @@ import '../ItemDetail/ItemDetail'
 import '../Item/Item'
 import '../ItemList/ItemList'
 
-const ItemCount = ({ initial, stock, item, onAdd, InputType, description}) => {
+const ItemCount = ({ initial, stock, onAdd}) => {
 
   const [cont, setCont] = useState(initial);
 
@@ -21,15 +21,14 @@ const ItemCount = ({ initial, stock, item, onAdd, InputType, description}) => {
    setCont (cont - 1)
   }
 
-  function addCart() 
-  {
-    onAdd(cont, item, description);
-    InputType();
+  function addCart()  {
+   onAdd(cont);
+   
   }
 
   return (
     
-        <div className="divPrincipalItemCount">
+        <div>
           <div>
             <h2>{cont}</h2>
             <button onClick={discount} disabled={cont === 1} >-</button>

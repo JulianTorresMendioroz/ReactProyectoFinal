@@ -3,18 +3,14 @@ import { useState } from "react";
 import { UseCartContext } from "../../Context/CartContext"
 import AddButton from "../AddButton/AddButton"
 
-export default function ItemDetail({item, stock}) {
+export default function ItemDetail({item}) {
     const [inputType, setInputType] = useState('itemCount');
     const {addToCart} = UseCartContext();
     
     function onAdd(cont) {
         addToCart({...item, cont})
-    }
-    function InputType() {
         setInputType('AddButton');
     }
-
-    //console.log(cartList)//
 
     return (
         <div>
@@ -24,7 +20,7 @@ export default function ItemDetail({item, stock}) {
                 <p>{`Precio: $${item.price}`}</p>
                 <p>{`Stock: ${item.stock}`}</p>
                 {inputType === 'itemCount' ?
-                <ItemCount id={item} initial={1} stock={stock} onAdd={onAdd} InputType={InputType}/>:
+                <ItemCount initial={1} stock={item.stock} onAdd={onAdd}/>:
                 <AddButton/>}
             </div>
            
