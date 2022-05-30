@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ItemList from "../ItemList/ItemList";
+import { collection, getDocs, getFirestore, where, query } from 'firebase/firestore';
 
 export default function ItemListContainer() {
     const [items,setItems] = useState([]);
@@ -8,12 +9,22 @@ export default function ItemListContainer() {
     const {id} = useParams();
 
     useEffect(() => {
-        fetch("/data/data.json")
-        .then(response => response.json())
-        .then(data => setItems(data))
-        .catch(err => console.log(err))
-        .finally(() => setLoader(false))
-    },[]);
+        const db = getFirestore();
+        const queryCollection = collection(db, 'items');
+        if (!id) {
+            getDocs(queryCollection)
+            .then(resp => setItems(resp.docs.map(el => ({id: el.id, ...el.data()}))))
+            .catch(err => console.log(err))
+            .finally(() => setLoader(false))
+        } else {
+            const queryCollectionFilter = query(queryCollection, where('category','==',id));
+            getDocs(queryCollectionFilter)
+            .then(resp => setItems(resp.docs.map(el => ({id: el.id, ...el.data()}))))
+            .catch(err => console.log(err))
+            .finally(() => setLoader(false))
+        }
+    },[id]);
+
     
     return (
         <div>

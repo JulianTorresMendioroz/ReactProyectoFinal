@@ -9,7 +9,7 @@ export default function CartItem({item}) {
     }
     
     return (
-        <li>Item: {item.title} - {item.description} - Precio: ${item.price} - Cantidad: {item.cont} - <span onClick={removeItem}><i></i></span></li>
+        <li>Item: {item.title} - {item.description} - Precio: ${item.price} - Cantidad: {item.cont} - <h2 onClick={removeItem}>X</h2></li>
     );
 }
 
