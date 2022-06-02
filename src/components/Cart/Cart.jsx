@@ -10,13 +10,13 @@ export default function Cart() {
     function createOrder() {
         let order = {};
         
-        order.buyer = {name: 'Julián', email: 'juliantorresmendioroz348@gmail.com', phone: '22845572898' };
+        order.buyer = {name: 'Julián', email: 'juliantorresmendioroz348@gmail.com', phone: '2284557289' };
         order.total = totalPrice;
         order.items = cartItem.map(item => {
             const id = item.id;
             const name = item.name;
             const price = item.price*item.cont;
-            return {id, name, price}
+            return {id: id, name: name, price: price}
         });
 
         const db = getFirestore();
@@ -32,7 +32,7 @@ export default function Cart() {
             <div className="cart">
                 <h1>No hay productos</h1>
                 <Link to='/'>
-                    <button>Ir al home</button>
+                    <button>Volver al home</button>
                 </Link>
             </div>
         );
