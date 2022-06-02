@@ -1,6 +1,5 @@
 import { UseCartContext } from "../../Context/CartContext";
 
-
 export default function CartItem({item}) {
     const {clearItem} = UseCartContext();
 
@@ -9,7 +8,9 @@ export default function CartItem({item}) {
     }
     
     return (
-        <li>Item: {item.title} - {item.description} - Precio: ${item.price} - Cantidad: {item.cont} - <h2 onClick={removeItem}>X</h2></li>
+        <li>Item: {item.name} 
+        - Precio: ${item.price}
+        - Cantidad: {item.cont} 
+        - <button onClick={removeItem}><i></i></button></li>
     );
 }
-

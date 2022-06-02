@@ -1,28 +1,46 @@
 import { Link } from "react-router-dom";
 import { UseCartContext } from "../../Context/CartContext";
-import CartItem from "../../components/CartItem/CartItem";
-
+import CartItem from "../CartItem/CartItem";
+import { collection, getFirestore, addDoc } from "firebase/firestore";
 
 export default function Cart() {
-    const {cartList, clearCart, totalPrice, totalItems} = UseCartContext();
+    const {totalItems, totalPrice, cartItem, clearCart} = UseCartContext();
+
+    /* HACER ORDERCONTEXT */
+    function createOrder() {
+        let order = {};
+        
+        order.buyer = {name: 'Julián', email: 'juliantorresmendioroz348@gmail.com', phone: '22845572898' };
+        order.total = totalPrice;
+        order.items = cartItem.map(item => {
+            const id = item.id;
+            const name = item.name;
+            const price = item.price*item.cont;
+            return {id, name, price}
+        });
+
+        const db = getFirestore();
+        const queryCollection = collection(db, 'orders');
+        addDoc(queryCollection, order)
+        .then(resp => console.log(resp))
+        .catch(err => console.log(err))
+        .finally(() => clearCart())
+    };
     
     if (!totalItems) {
         return (
-            <div>
+            <div className="cart">
                 <h1>No hay productos</h1>
                 <Link to='/'>
-                    <button>Volver al menú</button>
+                    <button>Ir al home</button>
                 </Link>
             </div>
         );
     }
 
     return (
-        <div>
-            <h1>Su pedido del producto:</h1>
-            {cartList.map(el => <CartItem key={el.id} item={el}/>)}
-            <p>{`Precio final: $${totalPrice}`}</p>
-            <button onClick={clearCart}>Vaciar carrito</button>
+        <div className="cart">
+            <CartItem createOrder={createOrder}/>
         </div>
     );
 }

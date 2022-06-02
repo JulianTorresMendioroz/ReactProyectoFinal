@@ -18,7 +18,7 @@ export default function CartContextProv({children}) {
         if (isInCart(item.id)) {
             let i = cartList.findIndex(el => el.id === item.id);
             const newCartList = cartList;
-            newCartList[i].quantity += item.cont;
+            newCartList[i].cont += item.cont;
             updateCart(newCartList);
         } else {
             updateCart([...cartList,item]);
