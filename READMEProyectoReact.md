@@ -1,4 +1,4 @@
-Nombre: E-commerce Hoodies Shop.
+Nombre: E-commerce Hoodies Shop (Venta de buzos).
 
 Descripción: Este proyecto es un e-commerce en el cual se venden buzos, resuelve el problema de poder elegir entre 2 categorías y no tener que ir a una tienda física y comprar, nos permitirá navegar de manera fácil e intuitiva entre las secciones, botones, home y carrito de compras.
 
