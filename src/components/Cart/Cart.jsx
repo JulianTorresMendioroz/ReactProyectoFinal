@@ -6,7 +6,7 @@ import { collection, getFirestore, addDoc } from "firebase/firestore";
 export default function Cart() {
     const {totalItems, totalPrice, cartList, clearCart} = UseCartContext();
 
-    /* HACER ORDERCONTEXT */
+
     function createOrder() {
         let order = {};
         
