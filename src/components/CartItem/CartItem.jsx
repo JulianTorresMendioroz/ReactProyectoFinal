@@ -9,7 +9,7 @@ export default function CartItem({item}) {
     }
     
     return (
-        <li>Item: {item.name} 
+        <li>-Item: {item.title} 
         - Precio: ${item.price}
         - Cantidad: {item.cont} 
         - <button onClick={removeItem}><i></i></button></li>

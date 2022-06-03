@@ -8,3 +8,5 @@ Instalación: Para poder instalar este proyecto se requiere hacer en consola un 
 
 Cómo usar: En principio estarás en el home, podés scrollear y mirar todos los productos en el mismo, para ver más funcionalidades podés entrar al detalle del item y agregar al carrito y comprar el producto, luego en las secciones tendrás los distintos tipos de buzos, podrás elegirlos desde ahí, luego en el carrito de compras serán mostrado todos los productos que hayas agregado.
 
+Librerias utilizadas: Boostrap, firebase.
+
