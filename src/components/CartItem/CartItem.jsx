@@ -1,5 +1,6 @@
 import { UseCartContext } from "../../Context/CartContext";
 
+
 export default function CartItem({item}) {
     const {clearItem} = UseCartContext();
 

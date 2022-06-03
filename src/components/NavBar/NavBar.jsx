@@ -14,10 +14,10 @@ const NavBar = () => {
         </Link>
         <CartWidget/>
         <Nav className="nav navbar-nav navbar-center">
-        <Link to='/category/Buzo sin capucha' style={{ textDecoration: 'none' }}>
+        <Link to='/category/Buzo sin capucha'>
         <li>Buzos sin capucha</li>
         </Link>
-        <Link to='/category/Buzo con capucha' style={{ textDecoration: 'none' }}>
+        <Link to='/category/Buzo con capucha'>
         <li>Buzos con capucha</li>
         </Link>
         </Nav>

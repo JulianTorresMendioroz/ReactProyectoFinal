@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import { UseCartContext } from "../../Context/CartContext";
-import CartItem from "../CartItem/CartItem";
+import CartList from "../CartList/CartList"
 import { collection, getFirestore, addDoc } from "firebase/firestore";
 
 export default function Cart() {
-    const {totalItems, totalPrice, cartItem, clearCart} = UseCartContext();
+    const {totalItems, totalPrice, cartList, clearCart} = UseCartContext();
 
     /* HACER ORDERCONTEXT */
     function createOrder() {
@@ -12,11 +12,11 @@ export default function Cart() {
         
         order.buyer = {name: 'Julián', email: 'juliantorresmendioroz348@gmail.com', phone: '2284557289' };
         order.total = totalPrice;
-        order.items = cartItem.map(item => {
+        order.items = cartList.map(item => {
             const id = item.id;
             const name = item.name;
             const price = item.price*item.cont;
-            return {id: id, name: name, price: price}
+            return {id, name, price}
         });
 
         const db = getFirestore();
@@ -40,7 +40,7 @@ export default function Cart() {
 
     return (
         <div className="cart">
-            <CartItem createOrder={createOrder}/>
+            <CartList createOrder={createOrder}/>
         </div>
     );
 }
