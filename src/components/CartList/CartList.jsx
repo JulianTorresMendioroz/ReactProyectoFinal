@@ -2,8 +2,8 @@ import { UseCartContext } from "../../Context/CartContext";
 import CartItem from "../CartItem/CartItem";
 
 
-export default function CartList({createOrder}) {
-    const {cartList, clearCart, totalPrice} = UseCartContext();
+export default function CartList() {
+    const {cartList, clearCart, totalPrice, createOrder} = UseCartContext();
 
     return (
         <div>

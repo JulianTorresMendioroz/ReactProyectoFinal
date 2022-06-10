@@ -7,6 +7,7 @@ export default function Item({el}) {
             <img src={el.pictureUrl} alt="" />
             <div></div>
             <div>
+                <h3>{el.title}</h3>
              <Link to={`/itemDetail/${el.id}`}>
                     <button>Ir al Detalle del producto</button>
                 </Link>
