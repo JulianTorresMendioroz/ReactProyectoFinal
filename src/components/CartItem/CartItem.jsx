@@ -15,3 +15,6 @@ export default function CartItem({item}) {
         - <button onClick={removeItem}><i></i></button></li>
     );
 }
+
+
+// probando nuevo sist op 
